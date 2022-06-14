@@ -3,20 +3,21 @@ import { UserType, userInitialState, userReducer } from "../reducers/userReducer
 import { reducerActionType } from "../types/reducerActionType";
 import { themeInitialState, ThemeType, themeReducer } from "../reducers/themeReducer";
 import { profileInitialState, profileReducer, ProfileType } from "../reducers/profileReducer";
+import { studentReducer, StudentType, studentInitialState } from "../reducers/studentReducer";
 // import { carReducer, carInitialState, CarType } from "../reducers/carReducer";
 
 type initialStateType = {
   user: UserType;
   theme: ThemeType;
   profile: ProfileType;
-  // car: CarType;
+  student: StudentType[];
 };
 
 const initialState = {
   user: userInitialState,
   theme: themeInitialState,
   profile: profileInitialState,
-  // car: carInitialState
+  student: studentInitialState,
 };
 
 type ContextType = {
@@ -35,7 +36,7 @@ const mainReducer = (state: initialStateType, action: reducerActionType) => ({
   user: userReducer(state.user, action),
   theme: themeReducer(state.theme, action),
   profile: profileReducer(state.profile, action),
-  // car: carReducer(state.car, action)
+  student: studentReducer(state.student, action),
 });
 
 /* --------------------------------------------------------------------------------*/

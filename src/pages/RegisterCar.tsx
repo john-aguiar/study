@@ -4,6 +4,8 @@ import { useCarContext } from "../contexts/CarContext";
 
 export const RegisterCar = () => {
   const { dispatch, cars } = useCarContext();
+  console.log(cars)
+  
   const location = useLocation();
   const { search } = location;
 

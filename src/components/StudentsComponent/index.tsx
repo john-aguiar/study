@@ -1,0 +1,1 @@
+import { StudentComponent } from './StudentComponent'
